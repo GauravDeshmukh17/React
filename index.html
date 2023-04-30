@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Component</title>
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- bable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.7/babel.min.js" integrity="sha512-AwKgGKNJcdP5iXoNQg8+F3jht6ZJzZ7Y9ogTdWDBmYsctzm4hUVTVRGWRqkqMbBHT1ValSe8Lwcfj2ApVl7sBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div id="root">Hello</div>
+</body>
+<script type="text/babel">
+
+    //  let elem=document.createElement("h1");
+    //  elem.innerText="Hello";
+    //  let root=document.getElementById("root");
+    //  console.log(elem);
+    //  root.appendChild(elem);
+    
+    
+    // react
+    // let ele=React.createElement("h1",{
+    //     children:["Hello"," Hi"],
+    // })
+    // console.log(ele);
+    // let root=document.getElementById("root");
+    // ReactDOM.render(ele,root);
+
+    // JSX=JS+XML
+    // Function component
+    // function Element(props){
+    //     console.log(props);
+    //     return(
+    //         // [<h1>Hello</h1>,
+    //         // <p>Gaurav</p>]
+    //         <div>
+    //             <h1>Hello {props.name}</h1>
+    //             <h2>from {props.city}</h2>
+    //         </div>
+    //     )
+    // }
+
+    // destructuring
+    function Element({name="myName",city="Mumbai"}){
+        console.log(name);
+        return(
+            // [<h1>Hello</h1>,
+            // <p>Gaurav</p>]
+            <div>
+                <h1>Hello {name}</h1>
+                <h2>from {city}</h2>
+            </div>
+        )
+    }
+
+    function Main(){
+        return (
+            <React.Fragment>
+                <Element name="Rohit Sharma" city="Mumbai"/>
+                <Element />
+                <Element />
+                <Element />
+                <Element />
+            </React.Fragment>   
+        )
+    }
+
+    ReactDOM.render(<Main />,document.getElementById('root'));
+    // ReactDOM.render(<EleMament/>,document.getElementById('root'));
+
+</script> 
+</html>
