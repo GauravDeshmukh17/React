@@ -23,9 +23,23 @@ export default class Todo extends Component {
   }
 
   handleSubmit = () => {
-    console.log("currTAsk "+this.state.currTask);
+    // console.log("currTAsk "+this.state.currTask);
+    // console.log(this.state.tasks);
     this.setState({
       tasks:[...this.state.tasks,{id:this.state.tasks.length+1,task:this.state.currTask}]
+    },() => {
+      localStorage.setItem("data",JSON.stringify(this.state.tasks));
+    })
+  }
+
+  handleDelete = (id) => {
+    // console.log(id);
+    let filteredArr=this.state.tasks.filter((tasksObj) => {
+      return tasksObj.id != id;
+    })
+    // console.log(filteredArr);
+    this.setState({
+      tasks:filteredArr
     })
   }
 
@@ -40,7 +54,7 @@ export default class Todo extends Component {
             return(
               <li key={taskObj.id}>
                 <p>{taskObj.task}</p>
-                <button>Delete</button>
+                <button onClick={() => {this.handleDelete(taskObj.id)}}>Delete</button>
               </li>
             )
           })
