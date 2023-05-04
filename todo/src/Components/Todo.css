@@ -13,3 +13,7 @@ button{
     height: 2rem;
     margin-top: 1.5rem;
 }
+
+input{
+    border:0.1rem solid black;
+}
