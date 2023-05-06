@@ -36,3 +36,61 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* my css */
+
+.banner-card{
+  width: 99;
+}
+
+.banner-img{
+  height: 80vh;
+  width: 100%;
+}
+
+.banner-title{
+  position:absolute;
+  top:60vh;
+  color:white;
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+.banner-text{
+  position: absolute;
+  top:68vh;
+  color:white;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.movies-list{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+
+@media screen and (max-width:400px){
+
+  .banner-card{
+    height:35vh;
+  }
+
+  .banner-img{
+    height: 35vh; 
+  } 
+
+  .banner-title{
+    top:5vh;
+    left:5vw;
+  }
+
+  .banner-text{
+    top:15vh;
+    left:5vw;
+  } 
+
+}
+
+
