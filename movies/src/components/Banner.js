@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import {movies} from './getMovies';
+import List from './List';
 
-export default class Banner extends Component {
+export default class Banner extends Component {  
   render(){
     let movie=movies.results[0];
+    console.log("render method is called");
     // let movie="";
-    console.log(movie);
+    // console.log(movie);
     return (
         <>
             {
@@ -18,7 +20,7 @@ export default class Banner extends Component {
                         <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} className="card-img-top banner-img" alt="..."/>
                         <div className="card-body">
                             <h5 className="card-title banner-title">{movie.original_title}</h5>
-                            <p className="card-text banner-text">{movies.results[0].overview}</p>
+                            <p className="card-text banner-text">{movie.overview}</p>
                             {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
                         </div>
                     </div>
