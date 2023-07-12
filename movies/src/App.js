@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      {/* <Banner /> */}
+      <Banner />
       <List />
     </div>
   );

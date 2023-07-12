@@ -68,6 +68,30 @@
 .movies-list{
   display:flex;
   flex-wrap:wrap;
+  justify-content: center;
+}
+
+.movie-card{
+  width:20vw;
+  margin: 1rem;
+  position: relative;
+}
+
+.movie-title{
+  position: absolute;
+  top:1rem;
+  left:1rem;
+  color:white;
+}
+
+.movie-button{
+  position: absolute;
+  top:80%;
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: center;
 }
 
 
